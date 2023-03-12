@@ -1,0 +1,27 @@
+div.categories-container {
+  width: 75%;
+  margin: 24px auto 0;
+
+  h2 {
+    margin-bottom: 12px;
+  }
+
+  div.categories {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 85%;
+    margin: 0 auto;
+
+    .category {
+      padding: 8px 20px;
+      color: #666;
+      border-radius: 16px;
+      background-color: #eee;
+    }
+    .category:hover {
+      cursor: pointer;
+    }
+  }
+}
