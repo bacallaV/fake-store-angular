@@ -1,27 +1,46 @@
 div.categories-container {
-  width: 75%;
-  margin: 24px auto 0;
+  width: 100%;
 
-  h2 {
-    margin-bottom: 12px;
-  }
+  overflow: hidden;
 
   div.categories {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
+    gap: 12px;
 
-    width: 85%;
+    width: 100%;
+    max-width: 800px;
     margin: 0 auto;
+    padding: 0 24px;
+
+    overflow-x: scroll;
 
     .category {
+      width: fit-content;
       padding: 8px 20px;
+
       color: #666;
       border-radius: 16px;
       background-color: #eee;
+      text-align: center;
     }
     .category:hover {
       cursor: pointer;
+    }
+  }
+
+  p.loading {
+    width: fit-content;
+    margin: auto;
+  }
+}
+
+@media screen and (min-width: 480px) {
+  div.categories-container {
+    div.categories {
+      overflow-x: hidden;
     }
   }
 }

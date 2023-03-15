@@ -9,6 +9,7 @@ import { CategoriesService } from 'src/app/services/categories.service';
 export class CategoriesComponent implements OnInit {
 
   public categories: string[];
+  public loading: boolean = true;
 
   constructor(
     private categoriesService: CategoriesService,
@@ -18,6 +19,7 @@ export class CategoriesComponent implements OnInit {
 
   ngOnInit() {
     this.categoriesService.getAllCategories().subscribe( data => {
+      this.loading = false;
       this.categories = data;
     });
   }
